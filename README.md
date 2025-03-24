@@ -14,3 +14,25 @@ console.log(makeTransaction(10, 500)); // "You ordered 10 droids worth 5000 cred
 Якщо потрібно просто вставити багаторядковий коментар, виділіть рядки коду та натисніть:
 - **Windows/Linux:** `Shift + Alt + A`
 Ця комбінація вставить або прибере `/* */` навколо вибраного коду.
+
+
+
+Задачі
+1.
+function getFileName(file) {
+    const fileSpotCss = file.indexOf("."); //-рядок з крапкою
+    if (fileSpotCss === -1) {             //якщо неіснує рядка з крапкою
+        return file;            //повертаємо оригінал рядок
+    } else {
+        return file.slice(0, fileSpotCss); //обрізаємо рядок до крапки
+    }
+}
+// return fileSpotcss === -1 ? file : file.slice(0, fileSpotcss); 
+
+console.log(getFileName("index.js")) // "index".
+console.log(getFileName("app")) // "app"
+console.log(getFileName("styles.css")) // "styles"
+console.log(getFileName("index")) // "index"
+console.log(getFileName("index.html")) // "index"
+console.log(getFileName("app.js")) // "app"
+console.log(getFileName("index.css")) // "index"
